@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>biogas</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+        <div class="sidebar-brand-text mx-3">Farm</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="admin.php">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Admin page</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+ 
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for" aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter"></span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div>
+                    <div class="small text-gray-500">9 25, 2020</div>
+                    <span class="font-weight-bold">Alerts 1</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div>
+                    <div class="small text-gray-500">9 25, 2020</div>
+                    <span class="font-weight-bold">Alerts 2</span>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+              </div>
+            </li>
+
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <!-- Counter - Messages -->
+                <span class="badge badge-danger badge-counter"></span>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  Message Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">message 1</div>
+                    <div class="small text-gray-500">hieu · 58m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div>
+                    <div class="text-truncate">message 2</div>
+                    <div class="small text-gray-500">hieu · 1d</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">All Messages</a>
+              </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">hieu</span>
+                <img class="img-profile rounded-circle" src="./img/logo-bach-khoa-ha-noi.jpg">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download report</a>
+            </div>
+
+            <!-- load data selector -->
+            <div class="row">
+                <button data-toggle="collapse" data-target="#demo" class="btn btn-primary">select</button>
+            </div>
+            <div class="row">
+                <div id="demo" class="collapse">
+                  <form id="selectForm">
+                    <hr>
+                    <div class="row">
+                                            <!--electrical select -->
+                      <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                              <h1 class="h3 mb-0 text-gray-800 align-center">location and time</h1>
+                              <hr>
+                              <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <!--select location-->
+                                    <label for="location">Choose location:</label>
+                                    <select name="location" id="location">
+                                        <option value="g01">Máy 1 (Nam Định)</option>
+                                        <option value="g02">Máy 2 (Phú Thọ)</option>
+                                        <option value="g03">Máy 3 (Phú Thọ 2)</option>
+                                        <option value="g04">Máy 4 (Thái Nguyên)</option>
+                                        <option value="g05">Máy 5 (Thái Nguyên 2)</option>
+                                        <option value="g06">Máy 6</option>
+                                        <option value="g07">Máy 7</option>
+                                        <option value="g08">Máy 8</option>
+                                        <option value="g09">Máy 9</option>
+                                        <option value="g10">Máy 10</option>
+                                        <option value="g11">Máy 11</option>
+                                        <option value="g12">Máy 12</option>
+                                        <option value="g13">Máy 13</option>
+                                        <option value="g14">Máy 14</option>
+                                        <option value="g15">Máy 15</option>
+                                        <option value="g16">Máy 16</option>
+                                    </select><br>
+                                    <br><label for="time_begin">time_begin:</label>
+                                    <input type="datetime-local" id="time_begin" name="time_begin">
+                                    <br><label for="time_end">time_end:</label>
+                                    <input type="datetime-local" id="time_end" name="time_end">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                                            <!--electrical select -->
+                      <div class="col-xl-5 col-md-6 mb-4">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                              <h1 class="h3 mb-0 text-gray-800 align-center">electrical</h1>
+                              <hr>
+                              <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                  <input type="radio" id="eleva" name="type" value="eleva">
+                                  <label for="eleva">Voltage_RMS_A_1</label><br>
+                                  <input type="radio" id="elevb" name="type" value="elevb">
+                                  <label for="elevb">Voltage_RMS_B_2</label><br>
+                                  <input type="radio" id="elevc" name="type" value="elevc">
+                                  <label for="elevc">Voltage_RMS_C_3</label><br>
+                                  <input type="radio" id="elevna" name="type" value="elevna">
+                                  <label for="elevna">Voltage_RMS_UN_Average</label><br>
+                                  <input type="radio" id="elevab" name="type" value="elevab">
+                                  <label for="elevab">Voltage_RMS_AB</label><br>
+                                  <input type="radio" id="elevbc" name="type" value="elevbc">
+                                  <label for="elevbc">Voltage_RMS_BC</label><br>    
+                                  <input type="radio" id="elevca" name="type" value="elevca">
+                                  <label for="elevca">Voltage_RMS_CA</label><br>
+                                  <input type="radio" id="elevla" name="type" value="elevla">
+                                  <label for="elevla">Voltage_RMS_line_average</label><br>
+                                  <input type="radio" id="eleia" name="type" value="eleia">
+                                  <label for="eleia">Current_RMS_A</label><br>
+                                  <input type="radio" id="eleib" name="type" value="eleib">
+                                  <label for="eleib">Current_RMS_B</label><br>
+                                  <input type="radio" id="eleic" name="type" value="eleic">
+                                  <label for="eleic">Current_RMS_C</label><br>
+                                  <input type="radio" id="eleiav" name="type" value="eleiav">
+                                  <label for="eleiav">Current_RMS_average</label><br>
+                                  <input type="radio" id="eles" name="type" value="eles">
+                                  <label for="eles">Speed</label><br>
+                                  <input type="radio" id="elef" name="type" value="elef">
+                                  <label for="elef">Frequency</label><br>
+                                </div>
+                                <div class="col mr-2">
+                                  <input type="radio" id="elepwa" name="type" value="elepwa">
+                                  <label for="elepwa">Active_Power_A</label><br>
+                                  <input type="radio" id="elepwb" name="type" value="elepwb">
+                                  <label for="elepwb">Active_Power_B</label><br>
+                                  <input type="radio" id="elepwc" name="type" value="elepwc">
+                                  <label for="elepwc">Active_Power_C</label><br>
+                                  <input type="radio" id="elepfa" name="type" value="elepfa">
+                                  <label for="elepfa">Power_factor_A</label><br>
+                                  <input type="radio" id="elepfb" name="type" value="elepfb">
+                                  <label for="elepfb">Power_factor_B</label><br>    
+                                  <input type="radio" id="elepfc" name="type" value="elepfc">
+                                  <label for="elepfc">Power_factor_C</label><br>
+                                  <input type="radio" id="elepft" name="type" value="elepft">
+                                  <label for="elepft">Power_factor_average</label><br>
+                                  <input type="radio" id="elethdva" name="type" value="elethdva">
+                                  <label for="elethdva">THD_Van/Vab</label><br>
+                                  <input type="radio" id="elethdvb" name="type" value="elethdvb">
+                                  <label for="elethdvb">THD_Vbn/Vbc</label><br>
+                                  <input type="radio" id="elethdvc" name="type" value="elethdvc">
+                                  <label for="elethdvc">THD_Vcn/Vca</label><br>
+                                  <input type="radio" id="elethdia" name="type" value="elethdia">
+                                  <label for="elethdia">THD_Ia</label><br>
+                                  <input type="radio" id="elethdib" name="type" value="elethdib">
+                                  <label for="elethdib">THD_Ib</label><br>
+                                  <input type="radio" id="elethdic" name="type" value="elethdic">
+                                  <label for="elethdic">THD_Ic</label><br>  
+                                  <input type="hidden" id="elethdic" name="type" value="">
+                                  <label for="elethdic"></label><br>    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+                                            <!--Environment select -->
+                      <div class="col-xl-2 col-md-6 mb-4">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                              <h1 class="h3 mb-0 text-gray-800 align-center">environment</h1>
+                              <hr>
+                              <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <input type="radio" id="envtw" name="type" value="envtw">
+                                    <label for="envtw">Temperature_water</label><br>
+                                    <input type="radio" id="envpo" name="type" value="envpo">
+                                    <label for="envpo">Pressure_oil</label><br>
+                                    <input type="radio" id="envo2" name="type" value="envo2">
+                                    <label for="envo2">Oxygen</label><br>
+                                    <input type="radio" id="envh2s" name="type" value="envh2s">
+                                    <label for="envh2s">H2S</label><br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+                                            <!--operation select -->
+                      <div class="col-xl-2 col-md-6 mb-4">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                              <h1 class="h3 mb-0 text-gray-800 align-center">operation</h1>
+                              <hr>
+                              <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <input type="radio" id="pidsp" name="type" value="pidsp">
+                                    <label for="pidsp">Speed_setpoint</label><br>
+                                    <input type="radio" id="opepidout" name="type" value="opepidout">
+                                    <label for="opepidout">Output_speed_pid</label><br>
+                                    <input type="radio" id="opevpb" name="type" value="opevpb">
+                                    <label for="opevpb">Biogas_in_valve</label><br>
+                                    <input type="radio" id="opepb" name="type" value="opepb">
+                                    <label for="opepb">Biogas_tank_pressure</label>
+                                    <input type="radio" id="opevsfb" name="type" value="opevsfb">
+                                    <label for="opevsfb">Speed_feedback_valve</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <input type="button" id="submit" value="Get data">
+                    <hr>
+                  </form>  
+                </div>
+            
+            </div>
+            <!--chart row-->
+            <br>
+            <div class="row">
+              <div class="col-xl-12 col-lg-7">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">chart</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">select</div>
+                        <a class="dropdown-item" href="#">#</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="chart-area" style="height: auto">
+                      <canvas id="chart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">out</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/requestData.js"></script>
+  
+  <!-- mqtt connector -->
+  <script src="js/getData.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+  <script src="js/connectMqtt.js"></script>
+</body>
+
+</html>
